@@ -1,4 +1,4 @@
-# 🚀 Month 1: The "Coming Soon" Teaser
+# 🚀 November 2026: A Coming Soon Teaser
 
 **Welcome to the Technical Department!** 
 For your first task, we are going back to the basics of the CSS web development stack. Before we build complex event platforms like VHACK or PIXEL, we need to understand our core meta-framework (Astro) and how we get our code live on the internet. 
