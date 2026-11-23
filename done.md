@@ -112,21 +112,21 @@
 *Goal: Deploy the site and experience CI/CD.*
 
 - [x] Log in to Cloudflare.
-- [ ] Navigate to **Workers & Pages → Create application → Pages → Connect to Git**, or the equivalent current interface.
-- [ ] Connect my GitHub account and select the appropriate repository.
-- [ ] Configure the build settings:
+- [x] Navigate to **Workers & Pages → Create application → Pages → Connect to Git**, or the equivalent current interface.
+- [x] Connect my GitHub account and select the appropriate repository.
+- [x] Configure the build settings:
   - Framework preset: `Astro`
   - Build command: `npm run build`
   - Build output directory: `dist`
-- [ ] Deploy Project Cider.
-- [ ] Obtain the public `.pages.dev` URL.
+- [x] Deploy Project Cider.
+- [x] Obtain the public `.pages.dev` URL.
 
 **Milestone:** ⬜ Project Cider is publicly accessible.
 
 ## Phase 7 — Final Verification & Submission ⬜
 *Goal: Meet every requirement in the Definition of Done.*
 
-- [ ] Open the live website and confirm it loads correctly.
+- [x] Open the live website and confirm it loads correctly.
 - [ ] Test navigation between Home and About on the deployed site.
 - [ ] Visit `/does-not-exist` and confirm my custom 404 page appears.
 - [ ] Confirm Project Cider displays correctly on mobile.
@@ -149,7 +149,7 @@ https://github.com/JavanMyna/Monthly-Task-Nov-2026
 Pending creation.
 
 **Live Website:**  
-Pending Cloudflare Pages deployment.
+https://project-cider.pages.dev/
 
 ## 🌱 Optional Improvements
 *Only attempt these after meeting all mandatory requirements.*
