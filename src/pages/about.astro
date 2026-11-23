@@ -1,0 +1,154 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pillars = [
+  {
+    number: "01",
+    title: "CREATE",
+    description:
+      "Turn bold ideas into tangible experiences. Experiment, prototype and bring your imagination to life.",
+    symbol: "↗",
+  },
+  {
+    number: "02",
+    title: "CONNECT",
+    description:
+      "Meet passionate builders, curious thinkers and future collaborators who share your drive to make an impact.",
+    symbol: "◎",
+  },
+  {
+    number: "03",
+    title: "CHALLENGE",
+    description:
+      "Step outside your comfort zone, rethink what's possible and discover what you're truly capable of.",
+    symbol: "✳",
+  },
+];
+---
+
+<BaseLayout
+  title="About the Event"
+  description="Discover NEXUS 2027, a fictional event bringing together the next generation of creators and innovators."
+>
+  <section class="relative grid-background overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-ink pointer-events-none"></div>
+
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-10 pt-24 pb-28 md:pt-36 md:pb-40">
+      <div class="reveal">
+        <p class="text-acid text-xs font-semibold uppercase tracking-[0.3em] mb-10">
+          / About the movement
+        </p>
+
+        <h1 class="text-[clamp(4rem,11vw,10rem)] leading-[0.9] tracking-[-0.085em] font-black uppercase">
+          BUILT FOR<br />
+          <span class="text-outline">WHAT'S</span><br />
+          <span class="text-acid">NEXT.</span>
+        </h1>
+      </div>
+
+      <div class="mt-14 md:mt-20 grid lg:grid-cols-2 gap-10 lg:gap-24">
+        <p class="text-white/40 text-xs uppercase tracking-[0.25em]">
+          The NEXUS Manifesto — 2027
+        </p>
+
+        <div>
+          <p class="text-xl md:text-2xl leading-relaxed font-medium text-white/85">
+            The future doesn't arrive fully formed.
+            It's imagined, questioned and built by people
+            who dare to think differently.
+          </p>
+          <p class="mt-6 text-white/50 leading-relaxed">
+            NEXUS 2027 is a fictional technology and innovation
+            gathering designed to bring together students,
+            developers, designers and creative thinkers.
+            It's where emerging talent meets bold ambition,
+            and where the journey matters as much as the outcome.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-panel border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32">
+      <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <p class="text-acid text-xs font-bold uppercase tracking-[0.3em] mb-5">
+            / Our core philosophy
+          </p>
+          <h2 class="text-4xl md:text-6xl font-black tracking-[-0.065em] uppercase">
+            THREE IDEAS.<br />
+            <span class="text-acid">ONE FUTURE.</span>
+          </h2>
+        </div>
+        <p class="text-white/45 max-w-xs text-sm leading-relaxed">
+          Everything begins with curiosity. Here's what drives us forward.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+        {pillars.map((pillar) => (
+          <article class="bg-panel p-8 md:p-10 min-h-[340px] flex flex-col group hover:bg-[#1a2115] transition-colors">
+            <div class="flex items-start justify-between">
+              <span class="text-acid text-xs tracking-[0.2em]">
+                / {pillar.number}
+              </span>
+              <span class="text-4xl text-acid/70 group-hover:text-acid transition-colors" aria-hidden="true">
+                {pillar.symbol}
+              </span>
+            </div>
+
+            <div class="mt-auto">
+              <h3 class="text-3xl font-black tracking-tight">
+                {pillar.title}
+              </h3>
+              <p class="mt-5 text-sm leading-relaxed text-white/50">
+                {pillar.description}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 lg:px-10 py-28 md:py-36">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-acid text-xs uppercase tracking-[0.3em] font-bold mb-7">
+          / The experience
+        </p>
+        <h2 class="text-4xl md:text-6xl font-black tracking-[-0.07em] uppercase leading-tight">
+          MORE THAN<br />
+          AN IDEA.<br />
+          <span class="text-acid">A MOVEMENT.</span>
+        </h2>
+      </div>
+
+      <div class="space-y-7">
+        <p class="text-white/65 leading-relaxed">
+          Imagine an environment filled with inspiring conversations,
+          hands-on experimentation and opportunities to learn
+          from people who are shaping tomorrow.
+        </p>
+
+        <p class="text-white/65 leading-relaxed">
+          Whether you're writing your first line of code,
+          designing your next big concept or exploring
+          the world of technology, NEXUS is built
+          around one belief: everyone starts somewhere.
+        </p>
+
+        <div class="pt-5">
+          <a
+            href="/"
+            class="inline-flex items-center gap-6 bg-acid text-ink px-7 py-4 text-xs font-extrabold uppercase tracking-[0.15em] hover:bg-white transition-colors"
+          >
+            Back to home <span class="text-lg" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

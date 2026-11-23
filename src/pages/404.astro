@@ -1,0 +1,46 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="404 — Signal Lost"
+  description="The page you're looking for could not be found."
+>
+  <section class="relative min-h-[75vh] flex items-center justify-center overflow-hidden grid-background">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/30 to-ink pointer-events-none"></div>
+
+    <div class="relative z-10 text-center px-6 py-24">
+      <p class="text-acid text-xs uppercase tracking-[0.35em] font-bold mb-8">
+        / Error — Signal lost
+      </p>
+
+      <h1
+        class="text-[clamp(8rem,26vw,22rem)] font-black tracking-[-0.12em] leading-none text-outline select-none"
+      >
+        404
+      </h1>
+
+      <h2 class="mt-3 text-3xl md:text-5xl font-black tracking-[-0.06em] uppercase">
+        LOST IN THE <span class="text-acid">VOID.</span>
+      </h2>
+
+      <p class="mt-6 text-white/50 max-w-md mx-auto leading-relaxed">
+        Looks like you've ventured beyond the known universe.
+        This page doesn't exist, but the future is still waiting.
+      </p>
+
+      <a
+        href="/"
+        class="mt-10 inline-flex items-center gap-6 bg-acid text-ink px-8 py-4 text-xs font-extrabold uppercase tracking-[0.15em] hover:bg-white transition-colors"
+      >
+        <span aria-hidden="true">←</span>
+        Return to home
+      </a>
+
+      <p class="mt-14 text-[10px] uppercase tracking-[0.3em] text-white/30">
+        NEXUS SYSTEM / ERROR 404
+      </p>
+    </div>
+  </section>
+</BaseLayout>

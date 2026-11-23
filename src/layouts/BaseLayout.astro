@@ -1,0 +1,117 @@
+
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "NEXUS 2027 — A new frontier for builders, creators and innovators.",
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080a08" />
+    <meta name="description" content={description} />
+
+    <title>{title} | NEXUS 2027</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="min-h-screen flex flex-col overflow-x-hidden">
+    <header class="relative z-50 border-b border-white/10">
+      <nav
+        aria-label="Main navigation"
+        class="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="text-2xl font-black tracking-[-0.09em] hover:text-acid transition-colors"
+          aria-label="NEXUS 2027 Home"
+        >
+          NEXUS<span class="text-acid">.</span>
+        </a>
+
+        <div class="flex items-center gap-7 sm:gap-10">
+          <a
+            href="/"
+            aria-current={currentPath === "/" ? "page" : undefined}
+            class:list={[
+              "text-xs font-semibold uppercase tracking-[0.18em] transition-colors",
+              currentPath === "/"
+                ? "text-acid"
+                : "text-white/60 hover:text-white",
+            ]}
+          >
+            Home
+          </a>
+
+          <a
+            href="/about"
+            aria-current={currentPath.startsWith("/about") ? "page" : undefined}
+            class:list={[
+              "text-xs font-semibold uppercase tracking-[0.18em] transition-colors",
+              currentPath.startsWith("/about")
+                ? "text-acid"
+                : "text-white/60 hover:text-white",
+            ]}
+          >
+            About
+          </a>
+
+          <span class="hidden sm:block h-5 w-px bg-white/20"></span>
+
+          <span
+            class="hidden sm:inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-acid"
+          >
+            <span class="h-2 w-2 rounded-full bg-acid animate-pulse"></span>
+            2027 Edition
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-white/10 bg-[#0b0e0b]">
+      <div
+        class="mx-auto max-w-7xl px-6 lg:px-10 py-9 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5"
+      >
+        <div>
+          <a href="/" class="font-black text-xl tracking-[-0.08em]">
+            NEXUS<span class="text-acid">.</span>
+          </a>
+          <p class="mt-2 text-xs text-white/40">
+            Built for the curious. Made for what's next.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-7 text-xs text-white/50">
+          <a href="/" class="hover:text-acid transition-colors">Home</a>
+          <a href="/about" class="hover:text-acid transition-colors">About</a>
+        </div>
+
+        <p class="text-[11px] text-white/35">
+          © 2027 NEXUS. A fictional event concept.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
