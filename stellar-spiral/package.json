@@ -1,5 +1,5 @@
 {
-  "name": "stellar-spiral",
+  "name": "satellite-solstice",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -12,6 +12,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.12"
+    "astro": "^7.4.13"
   }
 }

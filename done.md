@@ -70,9 +70,9 @@
 ## Phase 5 — Git & GitHub
 *Goal: Submit my work using proper version control.*
 
-- [ ] Review changed files using `git status`.
-- [ ] Stage and commit completed work.
-- [ ] Push changes to my forked GitHub repository.
+- [x] Review changed files using `git status`.
+- [x] Stage and commit completed work.
+- [x] Push changes to my forked GitHub repository.
 - [ ] Open a Pull Request to the original USM CSS repository.
 - [ ] Write a short PR description explaining what I built.
 
@@ -81,7 +81,7 @@
 ## Phase 6 — Cloudflare Deployment
 *Goal: Deploy the site and experience CI/CD.*
 
-- [ ] Log in to Cloudflare.
+- [x] Log in to Cloudflare.
 - [ ] Navigate to **Workers & Pages → Create application → Pages → Connect to Git**.
 - [ ] Connect my GitHub account and select the forked repository.
 - [ ] Configure the build settings:
@@ -108,7 +108,7 @@
 ## 🏆 Final Deliverables
 
 **GitHub Repository:**  
-`https://github.com/USERNAME/REPOSITORY`
+`https://github.com/JavanMyna/Monthly-Task-Nov-2026`
 
 **Pull Request:**  
 `https://github.com/ORIGINAL-REPO/pull/NUMBER`
