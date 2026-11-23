@@ -1,0 +1,76 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #080a08;
+  --color-panel: #111510;
+  --color-acid: #d4ff5c;
+  --color-muted: #92998d;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: #f4f5ee;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-acid);
+  color: var(--color-ink);
+}
+
+.grid-background {
+  background-image:
+    linear-gradient(rgba(212, 255, 92, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 255, 92, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(244, 245, 238, 0.55);
+}
+
+.glow {
+  box-shadow: 0 0 90px rgba(212, 255, 92, 0.09);
+}
+
+.reveal {
+  animation: reveal 0.85s ease-out both;
+}
+
+.reveal-delay {
+  animation-delay: 0.18s;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
