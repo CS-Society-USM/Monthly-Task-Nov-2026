@@ -1,3 +1,7 @@
+---
+const { eventName = "Project Cider" } = Astro.props;
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -5,19 +9,21 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Welcome!</title>
+		<title>Project Cider</title>
 	</head>
 	<body>
         <header>
             <!--Some simple navigation bar like about, but idk how -->
-            Home
-            About
+            <nav> 
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </nav>
         </header>
         <main>
             <slot />
         </main>
         <footer>
-            some fictional event name
+            <p>{eventName} | Coming Soon!</p>
         </footer>
 	</body>
 </html>

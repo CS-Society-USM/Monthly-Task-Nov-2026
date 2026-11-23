@@ -1,20 +1,9 @@
 ---
-const eventName = "CSS Tech Showcase";
-const year = 2026;
+import BaseLayout from "../layouts/BaseLayout.astro";
+const eventName = "Project Cider";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Welcome!</title>
-	</head>
-	<body>
-		<h1>{eventName}</h1>
-		<p>Coming Soon in {year}!</p> 
-	</body>
-</html>
+<BaseLayout eventName={eventName}>
+	<h1>{eventName}</h1>
+	<p>Coming Soon!</p>
+</BaseLayout>
 <!-- 2:45pm wow i dont have to refresh each time, if u already have it running you can just see it change in live time -->
