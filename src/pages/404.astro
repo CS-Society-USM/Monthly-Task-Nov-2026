@@ -1,10 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout>
-	<h1>What ur looking for isnt here...</h1>
-	<p>Maybe you typed in the wrong link. cer try balik.</p>
-    <nav>
-        <a href="/">Press to go home</a>
-    </nav>
+<BaseLayout
+    title="Page not found | Project Cider"
+    description="This page could not be found. Return to the Project Cider homepage."
+>
+    <section class="content-panel error-panel" aria-labelledby="error-title">
+        <p class="eyebrow">404 / Page not found</p>
+        <h1 class="page-heading" id="error-title">A wrong turn.<br />Not a dead end.</h1>
+        <p>The page you're looking for isn't here. Check the address, or head back to Project Cider.</p>
+        <a class="button-link" href="/">Back to homepage</a>
+    </section>
 </BaseLayout>
+
+<style>
+    .error-panel {
+        padding-block: clamp(3rem, 8vw, 6rem);
+    }
+
+    .button-link {
+        margin-top: 1rem;
+    }
+</style>

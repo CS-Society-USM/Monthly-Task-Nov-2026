@@ -3,11 +3,117 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const eventName = "Project Cider";
 ---
 <BaseLayout eventName={eventName}>
-	<section>
-		<h1>{eventName}</h1>
-		<p>An event where all coders unite. A chill coding session where we share our knowledge with one another.</p>
-		<p>As the saying goes, take a cider and you'll become a coder</p>
-		<p>Coming Soon!</p>
-	</section>
+    <section class="hero content-panel" aria-labelledby="event-title">
+        <p class="eyebrow">A student programming exchange</p>
+        <h1 id="event-title">Project<br />Cider</h1>
+        <div class="hero-intro">
+            <p class="tagline">Build skills.<br />Share what you know.</p>
+            <p class="description">
+                A space for students to learn through practical workshops,
+                share projects, and build software together.
+            </p>
+        </div>
+    </section>
+
+    <section class="announcement" aria-labelledby="announcement-title">
+        <h2 id="announcement-title">Coming soon</h2>
+        <div>
+            <p>Dates and programme details will be announced.</p>
+            <a class="text-link" href="/about/">
+                About the exchange <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="activities" aria-labelledby="activities-title">
+        <h2 class="eyebrow" id="activities-title">What we're planning</h2>
+        <ul class="tag-list">
+            <li>Practical workshops</li>
+            <li>Student project sharing</li>
+            <li>Collaborative coding</li>
+        </ul>
+    </section>
 </BaseLayout>
-<!-- 2:45pm wow i dont have to refresh each time, if u already have it running you can just see it change in live time -->
+
+<style>
+    .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 2.5rem;
+        align-items: end;
+    }
+
+    .hero .eyebrow {
+        grid-column: 1 / -1;
+        max-width: 25ch;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        font-size: clamp(3rem, 8vw, 6.5rem);
+        line-height: 1.15;
+        letter-spacing: -0.025em;
+    }
+
+    .tagline {
+        color: var(--text);
+        font: 400 clamp(1.15rem, 2.3vw, 1.65rem)/1.5 var(--font-display);
+        margin-bottom: 1.5rem;
+    }
+
+    .description {
+        margin-bottom: 0;
+    }
+
+    .announcement {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        margin: 2.5rem 0;
+        padding-inline: 0.25rem;
+    }
+
+    .announcement h2 {
+        writing-mode: vertical-rl;
+        margin: 0;
+        color: var(--accent);
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .announcement p {
+        max-width: 28ch;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .activities {
+        padding-inline: 0.25rem;
+    }
+
+    .activities h2 {
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 50rem) {
+        .hero {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .hero .eyebrow {
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+        }
+
+        .tagline {
+            margin-bottom: 1rem;
+        }
+    }
+</style>
