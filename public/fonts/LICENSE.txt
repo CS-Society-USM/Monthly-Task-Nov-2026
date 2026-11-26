@@ -1,0 +1,17 @@
+Minecraft Pixel (font metadata name: Minecraft Regular)
+Designer: Pwnage_Block
+Original font: https://fontstruct.com/fontstructions/show/432966
+Download source: https://www.fonts4free.net/minecraft-pixel-font.html
+
+Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported:
+https://creativecommons.org/licenses/by-sa/3.0/
+Legal terms: https://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+The creator's FontStruct page and the font's embedded metadata specify
+CC BY-SA 3.0. Fonts4Free's general personal-use label differs from that
+specific license information.
+
+Changes for Project Cider: TrueType table checksums and packaging were
+regenerated with FontTools so browsers can load this legacy font.
+Glyph outlines were not changed. This font remains under CC BY-SA 3.0.
+No endorsement by the font designer or Minecraft is claimed.

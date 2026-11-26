@@ -1,0 +1,169 @@
+---
+import "../styles/global.css";
+
+interface Props {
+    eventName?: string;
+    title?: string;
+    description?: string;
+}
+
+const {
+    eventName = "Project Cider",
+    title = "Project Cider | Student programming exchange",
+    description = "A student programming exchange for practical workshops, project sharing, and collaborative coding. Coming soon.",
+} = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="theme-color" content="#eeedf5" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#212330" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="preload" href="/fonts/minecraft-pixel.ttf" as="font" type="font/ttf" crossorigin />
+        <title>{title}</title>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <header class="site-header">
+            <a class="brand" href="/" aria-label={`${eventName} home`}>{eventName}</a>
+            <nav aria-label="Main navigation">
+                <a href="/" aria-current={currentPath === "/" ? "page" : undefined}>Home</a>
+                <a href="/about/" aria-current={currentPath === "/about" ? "page" : undefined}>About</a>
+            </nav>
+        </header>
+        <main id="main-content" tabindex="-1">
+            <slot />
+        </main>
+        <footer class="site-footer">
+            <div class="footer-row">
+                <span class="footer-name">{eventName}</span>
+                <span class="maker-mark" aria-label="Website maker: less-than dot">&lt;.</span>
+            </div>
+            <p class="font-credit">
+                Typeface: <a href="https://fontstruct.com/fontstructions/show/432966">Minecraft by Pwnage_Block</a>
+                · <a href="/fonts/LICENSE.txt">CC BY-SA 3.0 / font notes</a>
+            </p>
+        </footer>
+    </body>
+</html>
+
+<style>
+    .site-header,
+    main,
+    .site-footer {
+        width: min(var(--content-width), calc(100% - 3rem));
+        margin-inline: auto;
+    }
+
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        padding-block: 2rem;
+    }
+
+    .brand {
+        font: 400 0.8rem/1.6 var(--font-display);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.5rem;
+        font: 400 0.8rem/1.6 var(--font-display);
+    }
+
+    nav a {
+        padding-block: 0.35rem;
+        border-bottom: 1px solid transparent;
+        text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+        border-bottom-color: var(--accent);
+    }
+
+    main {
+        flex: 1;
+        padding-block: 0.75rem 4rem;
+    }
+
+    .site-footer {
+        border-top: 1px solid var(--border);
+        padding-block: 1.5rem;
+    }
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .footer-name {
+        color: var(--muted);
+        font: 400 0.7rem/1.7 var(--font-display);
+    }
+
+    .maker-mark {
+        color: var(--maker);
+        font: 400 1.35rem/1 Consolas, monospace;
+        letter-spacing: -0.12em;
+        padding-right: 0.2rem;
+    }
+
+    .font-credit {
+        margin: 0.8rem 0 0;
+        font-size: 0.7rem;
+    }
+
+    .skip-link {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1;
+        padding: 0.65rem 1rem;
+        background: var(--background);
+        transform: translateY(-200%);
+    }
+
+    .skip-link:focus {
+        transform: translateY(0);
+    }
+
+    @media (max-width: 35rem) {
+        .site-header,
+        main,
+        .site-footer {
+            width: calc(100% - 2rem);
+        }
+
+        .site-header {
+            gap: 1rem;
+            padding-block: 1.5rem;
+        }
+
+        .brand,
+        nav {
+            font-size: 0.7rem;
+        }
+
+        nav {
+            gap: 1rem;
+        }
+    }
+</style>

@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Minecraft Pixel";
+    src: url("/fonts/minecraft-pixel.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    color-scheme: light dark;
+    --background: #eeedf5;
+    --surface: #e0ddeb;
+    --text: #28283d;
+    --muted: #5c5c76;
+    --border: #cac8da;
+    --accent: #66518b;
+    --on-accent: #ffffff;
+    --maker: #707080;
+    --content-width: 1120px;
+    --font-display: "Minecraft Pixel", Consolas, monospace;
+    --font-body: "Segoe UI", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #212330;
+        --surface: #2d3041;
+        --text: #eeedf4;
+        --muted: #b2b2c8;
+        --border: #424457;
+        --accent: #c4b1e8;
+        --on-accent: #212330;
+        --maker: #92939e;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.35;
+    text-wrap: balance;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    max-width: 65ch;
+    color: var(--muted);
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.25em;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+}
+
+.eyebrow {
+    color: var(--muted);
+    font: 400 0.7rem/1.8 var(--font-display);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.content-panel {
+    background: var(--surface);
+    padding: clamp(1.5rem, 5vw, 4rem);
+}
+
+.page-heading {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 1.5rem;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font: 400 0.85rem/1.7 var(--font-display);
+    text-decoration: none;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 0.9rem 1.25rem;
+    background: var(--accent);
+    color: var(--on-accent);
+    border: 1px solid var(--accent);
+    font: 400 0.85rem/1.6 var(--font-display);
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background: transparent;
+    color: var(--accent);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.tag-list li {
+    border: 1px solid var(--border);
+    padding: 0.65rem 0.8rem;
+    font: 400 0.75rem/1.7 var(--font-display);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a {
+        transition: color 150ms ease, background-color 150ms ease;
+    }
+}
